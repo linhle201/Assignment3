@@ -1,0 +1,334 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    
+}
+html{
+    font-size: 10px;
+    font-family: sans-serif;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+.container{
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 2.2rem;
+}
+header{
+    position: fixed;
+    top: 0;
+    z-index: 1400;
+    width: 100%;
+    height: 4.4rem;
+    background-color: rgba(0,0,0,.8);
+    backdrop-filter: blur(2rem);
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -1rem;
+}
+.nav-list-mobile{
+    display: none;
+}
+.nav-link{
+    font-size: 1.4rem;
+    color: #fdfbfb;
+    padding: 0 0.5rem;
+    transition: opacity .5s;
+}
+.nav-link:hover{
+    opacity: .7s;
+}
+.nav-link-apple{
+    width: 2.5rem;
+    height: 4.2rem;
+    background: url("logo.png") center no-repeat;
+    background-size: cover;
+    
+
+}
+.applelogo{
+    height: 6rem;
+    width: 5rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    
+}
+.title1{
+    color: #0e0e0e;
+    text-align: center;
+    padding-top: 5.5rem;
+}
+.title-heading1{
+    font-size:4.7rem ;
+    line-height: 1.07143;
+    letter-spacing: -.005rem;
+}
+.iphone-11{
+    padding-top: 7rem;
+    margin-top: 7rem;
+    border-top: none;
+    
+}
+.background{
+    background-image: url("6.png");
+    height: 65rem;
+    background-size: auto 73.6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 7rem solid #fff;
+    border-bottom: 5rem solid #fff;
+}
+
+.iphone-11-pro{
+    background: url("ip11.jpg");
+    margin-top: 15rem;
+    width: 100%;
+   
+}
+.hero {
+    height: 69.2rem;
+    background-size: auto 73.6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: .6rem solid #fff;
+    border-bottom: .6rem solid #fff;
+}
+.title{
+    color: #fff;
+    text-align: center;
+    padding-top: 5.5rem;
+}
+.title-heading{
+    font-size:5.6rem ;
+    line-height: 1.07143;
+    letter-spacing: -.005rem;
+}
+.title-subheading{
+    font-size: 2.65rem;
+    margin-top: 1rem;
+    letter-spacing: .008rem;
+    font-weight: 400;
+}
+.title-price{
+    font-size: 1.7rem;
+    color: #f8f4f4;
+    margin-top: 1rem;
+}
+.cta{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.cta-link{
+    color: #0466b5;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+main{
+    display: grid;
+    grid-gap:1.5rem;
+    padding: 2rem 9%;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+}
+.item{
+  padding: 3% 4% 1% 4%;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 30rem;
+}
+main h2{
+    color: black;
+    font-size:3rem ;
+    line-height: 1.07143;
+    letter-spacing: -.005rem;
+}
+main h3{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    letter-spacing: .008rem;
+    font-weight: 400;
+    
+}
+
+.item:first-child{
+  /* grid-column: tracklinestar/ tracklineend*/
+  /* grid-row: tracklinestar/ tracklineend*/
+  /*imac */
+    grid-column: 1/2;
+    grid-row: 1/2; 
+    background-color: rgb(238, 239, 242);
+    
+}
+ 
+.item:nth-child(2){
+ /*ipad */
+    grid-column: 2/3;
+    grid-row: 1/2; 
+    background-color: rgb(238, 239, 242);
+}
+
+.item:nth-child(3){
+ /*iphone */
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: rgb(238, 239, 242);
+    
+}
+
+.item:nth-child(4){
+    /*iwatch */
+    grid-column: 2/3;
+    grid-row: 2/3; 
+    background-color: rgb(238, 239, 242);
+    
+}
+main figure.imacimage{
+    display: block;
+    height: 50rem;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*media query*/
+@media screen and (max-width: 767px) {
+    header{
+        height: 4.8rem;
+    }
+    header .container{
+        padding: 0;
+    }
+
+    .iphone-11{
+        margin-top: 4.8rem;
+    }
+    .iphone-11-pro{
+        margin-top: 4.8rem;
+    }
+    .nav-list{
+        margin-top: 0;
+    }
+    .nav-item{
+        width: 4.8rem;
+        height: 4.8rem;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-item-hidden{
+        display: none;
+    }
+    .mobile-menu{
+        position: relative;
+        z-index: 1500;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .line{
+        position: absolute;
+        width: 1.7rem;
+        height: 1px;
+        background-color: #fff;
+        transition: margin-top .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+        
+    }
+    .line-top{
+        margin-top: 3px;
+    }
+    .line-bottom{
+        margin-top: -.4rem;
+    }
+    .active .line-top{
+        margin-top: 0;
+        transform: rotate(45deg) ;
+        transition: transform .3192s .1s;
+
+    }
+    main{
+    display: grid;
+    grid-gap:1.5rem;
+    padding: 2rem 9%;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: "h2"; 
+    }
+    .item{
+    padding: 3% 4% 1% 4%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 30rem;
+    }
+    main h2{
+    color: black;
+    font-size:3rem ;
+    line-height: 1.07143;
+    letter-spacing: -.005rem;
+    }
+    main h3{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    letter-spacing: .008rem;
+    font-weight: 400;
+    }
+    .item:first-child{
+  /* grid-column: tracklinestar/ tracklineend*/
+  /* grid-row: tracklinestar/ tracklineend*/
+  /*imac */
+    grid-column: 1/2;
+    grid-row: 1/2; 
+    }
+    .item:nth-child(2){
+ /*ipad */
+    grid-column: 2/3;
+    grid-row: 1/2; 
+    }
+    .item:nth-child(3){
+ /*iphone */
+    grid-column: 1/2;
+    grid-row: 2/3; 
+    }
+    .item:nth-child(4){
+    /*iwatch */
+    grid-column: 2/3;
+    grid-row: 2/3; 
+    }
+}
+@media screen and (max-width: 1350px) {
+    .iphone-11-pro{
+        background: url("ip11.jpg");
+    }
+    .hero{
+    height: 55rem;
+    background-size: auto 50rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: .6rem solid #fff;
+    border-bottom: .6rem solid #fff;
+    }
+    .title-heading{
+        font-size:4.4rem ;
+
+    }
+    .title-subheading{
+        font-size: 2.4rem;
+    }
+    .cta-link:nth-child(2){
+        margin-left: 2rem;
+    }
+   
+    
+}
