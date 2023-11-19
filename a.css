@@ -50,7 +50,6 @@ header{
     height: 4.2rem;
     background: url("logo.png") center no-repeat;
     background-size: cover;
-    
 
 }
 .applelogo{
@@ -88,20 +87,21 @@ header{
     border-bottom: 2rem solid #fff;
 }
 
-.iphone-11-pro {
-    position: absolute;
-    background-color: #020202;
-    height: 60rem;
+
+.iphone-11-pro .img11 {
     width: 100%;
-  
-}
-.img11 {
     bottom: 0;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
 }
-
+.iphone-11-pro {
+    bottom: 0;
+    margin-bottom:  20rem;
+    background-color: #020202;
+    height: 60rem;
+    
+}
 .title{
     color: #fff;
     text-align: center;
@@ -200,31 +200,33 @@ main {
     display: inline-block;
 }
 
-@media only screen and (max-width: 445px) {
-
-    body{
-        width: 100%;
-    }
-    .nav-list-larger {
-        display: none;
+@media only screen and (max-width: 454px) {
+    header .container{
+        padding: 0;
     }
     
-
-    /* Hide the mobile menu icon */
-    .nav-list-mobile {
-        display: none;
-    }
-
-    /* Show the mobile Apple logo */
-    .nav-link-apple {
-        display: block;
-        margin: 0 auto;
-        width: 3rem;
-        height: 3rem;
-        background: url("logo.png") center no-repeat;
-        background-size: contain;
-    }
-        
+        /* Hide all navigation items except Apple logo in mobile view */
+        .nav-list .nav-item {
+            display: none;
+        }
+    
+        /* Show only the Apple logo in mobile navigation */
+        .nav-list .nav-list-mobile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+        }
+    
+        .nav-list .nav-list-mobile .nav-link-apple {
+            display: block;
+            width: 2.5rem;
+            height: 4.2rem;
+            background: url("logo.png") center/contain no-repeat; /* Center and contain the logo */
+        }
+    
+    
     main {
         grid-template-columns: 1fr; 
         padding: 1rem; 
@@ -292,20 +294,34 @@ main {
         letter-spacing: -.005rem;
     }
     .iphone-11{
-        padding-top: 7rem;
-        margin-top: 3rem;
         border-top: none;
         font-size: 3rem;
         
     }
+    
     .background{
+        padding-top: -2rem;
+        margin-top: -5rem;
         background-image: url("6.png");
         height: 45rem;
         background-size: auto 40rem;
     }
     
     .iphone-11-pro {
-        height: 55rem;
+        width: 100%;
+        max-height: 40rem;
+       
+    }
+    .iphone-11-pro .img11{
+        width: 100%;
+        height: 20rem;
+        padding-top: 5rem;
+        position: relative;
+        display: flex;
+        padding-bottom: none;
+        margin-bottom: -5rem;
+
+        
     }
     .title{
         color: #fff;
@@ -348,6 +364,12 @@ main {
         padding-bottom: 3rem;
     
     }
+    .iphone-11-pro {
+        height: 55rem;
+        bottom: none;
+        padding-bottom: 1rem ;
+    }
+   
     
     .item .title h2 {
         font-size: 2.2rem;
