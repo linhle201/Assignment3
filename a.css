@@ -138,9 +138,8 @@ main {
     grid-template-rows: 1fr 1fr;
     grid-gap: 1.5rem;
     padding: 2rem 11%;
-    padding-bottom: 7rem;
-    padding-top: 4rem;
-   
+    padding-bottom: 5rem;
+    padding-top: -3rem;
 }
 
 .item {
@@ -204,29 +203,11 @@ main {
     header .container{
         padding: 0;
     }
-    
-        /* Hide all navigation items except Apple logo in mobile view */
-        .nav-list .nav-item {
-            display: none;
-        }
-    
-        /* Show only the Apple logo in mobile navigation */
-        .nav-list .nav-list-mobile {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            padding: 0;
-        }
-    
-        .nav-list .nav-list-mobile .nav-link-apple {
-            display: block;
-            width: 2.5rem;
-            height: 4.2rem;
-            background: url("logo.png") center/contain no-repeat; /* Center and contain the logo */
-        }
-    
-    
+   
+    .iphone-11-pro {
+            bottom: 0;
+            margin-bottom:  5rem;
+    }
     main {
         grid-template-columns: 1fr; 
         padding: 1rem; 
